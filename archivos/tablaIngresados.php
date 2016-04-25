@@ -1,0 +1,1 @@
+ <table><th>Legajo</th><th>Apellido</th><th>Nombre</th><th>Foto</th><tr> <td> 102099</td> <td> Coarasa</td> <td> Daniel</td><td><img src=Fotitos/Coarasa_Daniel_102099.jpg height=100px with=100px/></td></tr> </table>

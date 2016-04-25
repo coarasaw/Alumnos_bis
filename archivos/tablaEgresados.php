@@ -1,0 +1,2 @@
+ <table><th>Legajo</th><th>Apellido</th><th>Nombre</th><th>Foto</th><tr> <td> 102042</td> <td> Graneros</td> <td> Josefina</td><td><img src=Fotitos/Graneros_Josefina_102042.jpg
+ height=100px with=100px/></td></tr> </table>
