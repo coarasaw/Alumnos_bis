@@ -120,7 +120,7 @@ class Alumnos
 			else
 			{								
 				if($_FILES['archivo']['size'] > 1480576 || $_FILES['archivo']['size'] == 0){
-					$tamaño = $this->foto['archivo']['size'];
+					$tamaño = $_FILES['archivo']['size'];
 					$_SESSION['mensaje'] = "La foto supera el tamaño permitido ($tamaño/1024)";
 					return;
 				}
@@ -134,7 +134,7 @@ class Alumnos
 				$alumnito[0]=$lModi;
 				$alumnito[1]=$aModi;
 				$alumnito[2]=$nModi;
-				$alumnito[3]=$extension;
+				$alumnito[3]=$extension. "\n";
 				$listaAlumnosGuardados[] = $alumnito;	
 			}
 		}		
@@ -206,8 +206,11 @@ class Alumnos
 	{
 		$archivo=fopen("archivos/ingresados.txt", "w");
 		foreach ($listado as $alumno) {
-			fwrite($archivo, $alumno[0] . "=>" . $alumno[1] . "=>" . $alumno[2] . "=>" . $alumno[3]);			 
-		}			
+			fwrite($archivo, $alumno[0] . "=>" . $alumno[1] . "=>" . $alumno[2] . "=>" . $alumno[3]);
+			//echo $archivo, $alumno[0] . "=>" . $alumno[1] . "=>" . $alumno[2] . "=>" . $alumno[3];	
+			//echo "<br>";		 
+		}	
+		//die();		
 		fclose($archivo);
 	}
 
